@@ -10,7 +10,7 @@ trait Commentable
      */
     public function comments()
     {
-        return $this->morphMany('Lanz\Commentable\Comment');
+        return $this->morphMany('Lanz\Commentable\Comment', 'commentable');
     }
 
 }
