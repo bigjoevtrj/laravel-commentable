@@ -32,7 +32,7 @@ class CommentableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register('Baum\BaumServiceProvider');
+        $this->app->register('Baum\Providers\BaumServiceProvider');
     }
 
     /**
