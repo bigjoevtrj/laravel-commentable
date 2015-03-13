@@ -1,12 +1,9 @@
 <?php namespace Lanz\Commentable;
 
 use Illuminate\Console\Command;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 
 class MigrationCommand extends Command
 {
-
     /**
      * The console command name.
      *
@@ -23,8 +20,6 @@ class MigrationCommand extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return void
      */
     public function fire()
     {
@@ -35,7 +30,7 @@ class MigrationCommand extends Command
 
         if ($this->confirm("Proceed with the migration creation? [Yes|no]")) {
             $this->line('');
-            $this->info( "Creating migration..." );
+            $this->info("Creating migration...");
 
             if ($this->createMigration()) {
                 $this->info("Migration successfully created!");
@@ -59,13 +54,13 @@ class MigrationCommand extends Command
     {
         $migration_file = $this->laravel->path.'/database/migrations/'.date('Y_m_d_His').'_create_comments_table.php';
 
-        if ( ! file_exists($migration_file) && $fs = fopen($migration_file, 'x')) {
-            fwrite($fs, file_get_contents(__DIR__ . '/../migrations/create_comments_table.php'));
+        if (! file_exists($migration_file) && $fs = fopen($migration_file, 'x')) {
+            fwrite($fs, file_get_contents(__DIR__.'/../migrations/create_comments_table.php'));
             fclose($fs);
+
             return true;
         }
 
         return false;
     }
-
 }
