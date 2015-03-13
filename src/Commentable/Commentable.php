@@ -2,7 +2,6 @@
 
 trait Commentable
 {
-
     /**
      * This model has many comments.
      *
@@ -12,5 +11,4 @@ trait Commentable
     {
         return $this->morphMany('Lanz\Commentable\Comment', 'commentable');
     }
-
 }

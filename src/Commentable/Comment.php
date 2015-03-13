@@ -5,7 +5,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Node
 {
-
     /**
      * The attributes that are mass assignable.
      *
@@ -14,7 +13,7 @@ class Comment extends Node
     public $fillable = ['title', 'body'];
 
     /**
-     * Helper method to check if a comment has children
+     * Helper method to check if a comment has children.
      *
      * @return bool
      */
@@ -24,8 +23,6 @@ class Comment extends Node
     }
 
     /**
-     *
-     *
      * @return mixed
      */
     public function commentable()
@@ -42,5 +39,4 @@ class Comment extends Node
     {
         return $this->belongsTo(Config::get('auth.model'));
     }
-
 }

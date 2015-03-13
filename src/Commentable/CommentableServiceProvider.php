@@ -4,7 +4,6 @@ use Illuminate\Support\ServiceProvider;
 
 class CommentableServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -14,8 +13,6 @@ class CommentableServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap the application events.
-     *
-     * @return void
      */
     public function boot()
     {
@@ -25,10 +22,8 @@ class CommentableServiceProvider extends ServiceProvider
         });
     }
 
-     /**
+    /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {
@@ -43,8 +38,7 @@ class CommentableServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'command.commentable.migration'
+            'command.commentable.migration',
         ];
     }
-
 }
