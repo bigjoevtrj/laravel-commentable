@@ -67,6 +67,7 @@ $post = Post::first();
 
 $comment = new Lanz\Commentable\Comment;
 $comment->body = 'My first comment!';
+$comment->user_id = \Auth::id();
 
 $post->comments()->save($comment);
 
