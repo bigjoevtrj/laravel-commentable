@@ -1,4 +1,8 @@
 # Laravel Commentable
+
+[![Build Status](https://travis-ci.org/RomainLanz/laravel-commentable.svg?branch=2.0)](https://travis-ci.org/RomainLanz/laravel-commentable)
+[![Downloads](https://poser.pugx.org/lanz/laravel-commentable/downloads.svg)](https://packagist.org/packages/lanz/laravel-commentable)
+
 Allows for threaded comments to be added to multiple and different models within your app for Laravel 4 and 5.
 
 For Laravel 4, look at the [1.0 branch](https://github.com/RomainLanz/laravel-commentable/tree/1.0).
