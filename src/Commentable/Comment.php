@@ -1,5 +1,6 @@
 <?php namespace Lanz\Commentable;
 
+use Config;
 use Baum\Node;
 use Illuminate\Database\Eloquent\Model;
 
